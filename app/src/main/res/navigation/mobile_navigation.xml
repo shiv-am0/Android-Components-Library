@@ -34,13 +34,19 @@
         android:id="@+id/advancedFragment"
         android:name="in.iot.lab.acl.AdvancedFragment"
         android:label="fragment_advanced"
-        tools:layout="@layout/fragment_advanced" >
+        tools:layout="@layout/fragment_advanced">
         <action
             android:id="@+id/action_advancedFragment_to_fragment_adv__sub__lottie"
             app:destination="@id/fragment_adv__sub__lottie" />
         <action
             android:id="@+id/action_advancedFragment_to_fragment_adv__sub__Confetti"
             app:destination="@id/fragment_adv__sub__Confetti" />
+        <action
+            android:id="@+id/action_advancedFragment_to_fragment_adv__sub__CountryCodePicker"
+            app:destination="@id/fragment_adv__sub__CountryCodePicker" />
+        <action
+            android:id="@+id/action_advancedFragment_to_fragment_adv__sub__CircleMenuView"
+            app:destination="@id/fragment_adv__sub__CircleMenuView" />
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
@@ -93,7 +99,7 @@
         android:id="@+id/rv_Sub_grp_Containers"
         android:name="in.iot.lab.acl.SubHome.Rv_Sub_grp_Containers"
         android:label="fragment_rv__sub_grp__containers"
-        tools:layout="@layout/fragment_rv__sub_grp__containers" >
+        tools:layout="@layout/fragment_rv__sub_grp__containers">
         <action
             android:id="@+id/action_rv_Sub_grp_Containers_to_spinnerFrag"
             app:destination="@id/spinnerFrag" />
@@ -131,8 +137,11 @@
             android:id="@+id/action_rv_Sub_grp_DerivedComponents_to_alertDialogFrag"
             app:destination="@id/alertDialogFrag" />
         <action
+            android:id="@+id/action_rv_Sub_grp_DerivedComponents_to_timePickerFrag"
+            app:destination="@id/timePickerFrag" />
+        <action
             android:id="@+id/action_rv_Sub_grp_DerivedComponents_to_snackBarFrag"
-            app:destination="@id/snackBarFrag" />
+            app:destination="@+id/snackBarFrag" />
     </fragment>
     <fragment
         android:id="@+id/rv_Sub_grp_Layouts"
@@ -389,6 +398,11 @@
         android:label="fragment_recycler_view"
         tools:layout="@layout/fragment_recycler_view" />
     <fragment
+        android:id="@+id/timePickerFrag"
+        android:name="in.iot.lab.acl.derivedComponent.TimePickerFrag"
+        android:label="fragment_time_picker"
+        tools:layout="@layout/fragment_time_picker" />
+    <fragment
         android:id="@+id/snackBarFrag"
         android:name="in.iot.lab.acl.derivedComponent.SnackBarFrag"
         android:label="fragment_snack_bar"
@@ -398,4 +412,14 @@
         android:name="in.iot.lab.acl.button.ChipFrag"
         android:label="fragment_chip"
         tools:layout="@layout/fragment_chip" />
+    <fragment
+        android:id="@+id/fragment_adv__sub__CountryCodePicker"
+        android:name="in.iot.lab.acl.SubAdvanced.fragment_adv__sub__CountryCodePicker"
+        android:label="fragment_adv__sub___country_code_picker"
+        tools:layout="@layout/fragment_adv__sub___country_code_picker" />
+    <fragment
+        android:id="@+id/fragment_adv__sub__CircleMenuView"
+        android:name="in.iot.lab.acl.SubAdvanced.fragment_adv__sub__CircleMenuView"
+        android:label="fragment_adv__sub___circle_menu_view"
+        tools:layout="@layout/fragment_adv__sub___circle_menu_view" />
 </navigation>
